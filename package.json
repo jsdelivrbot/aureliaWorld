@@ -1,0 +1,50 @@
+{
+  "jspm": {
+    "dependencies": {
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0",
+      "aurelia-chart": "npm:aurelia-chart@^0.2.5",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.1",
+      "aurelia-materialize-css": "npm:aurelia-materialize-css@^0.0.14",
+      "aurelia-react-loader": "npm:aurelia-react-loader@^1.0.4",
+      "chartjs": "npm:chartjs@^0.3.24",
+      "css": "github:systemjs/plugin-css@^0.1.25",
+      "grofit/aurelia-chart": "github:grofit/aurelia-chart@^0.2.5",
+      "highcharts": "npm:highcharts@^4.2.5",
+      "highcharts-more-node": "npm:highcharts-more-node@^1.0.1",
+      "jquery": "npm:jquery@^3.1.0",
+      "jquery-ui": "github:components/jqueryui@^1.12.0",
+      "jsx": "github:floatdrop/plugin-jsx@^1.2.1",
+      "react": "npm:react@^15.2.1",
+      "react-dom": "npm:react-dom@^15.2.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "npm:chartjs@0.3.24": {
+        "format": "global"
+      }
+    }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.41"
+  },
+  "dependencies": {
+    "aurelia-chart": "^0.2.5",
+    "chart.js": "^1.1.1",
+    "highcharts": "^4.2.5",
+    "react": "^15.3.0",
+    "react-chartjs": "^0.8.0",
+    "react-dom": "^15.3.0"
+  },
+  "aurelia": {
+    "build": {
+      "resources": [
+        "aurelia-chart/attributes/chart-attribute",
+        "aurelia-chart/elements/chart-element"
+      ]
+    }
+  }
+}

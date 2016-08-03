@@ -1,0 +1,82 @@
+.loginG {
+    margin-top: 15%;
+    cursor: pointer;
+}
+.navbar-header {
+    background-color:  rgb(0, 188, 212);
+    height: 50px;
+    line-height: 50px;
+}
+.nav-wrapper i {
+    line-height: 50px !important;
+}
+#nav-mobile li{
+    font-weight: 900;
+    font-size: 25px;
+}
+.menu-icon,.svgicon-more {
+    cursor: pointer;
+}
+.releaseAddBtn {
+    position: fixed !important;
+    left: 85% !important;
+    top: 100px !important;
+    background-color: #00bcd4 !important;
+}
+.releaseDtilLabel {
+    font-weight: bold;
+    color: rgb(86, 86, 86);
+    font-size: 13px;
+}
+.dashboard-chart-container {
+    width: 90% !important;
+    margin-top: 40px !important;
+    padding: 10px;
+}
+.chart-margin {
+    margin-top: 30px;
+}
+
+/*Employee */
+.employee-add-container {
+    margin-top: 40px !important;
+    width : 90% !important;
+    padding : 0px 20px 10px 20px;
+    background-color: rgba(72,70,70,0.04);
+}
+.btn-activ-deactive {
+    color:red !important;
+}
+
+.btn-save-employeadd {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-add-experience {
+    left : 85%;
+    top : 10px;
+}
+.employe-dfltcolor {
+    background-color: #00bcd4 !important;
+}
+.delete-exp-icon {
+    padding-top: 25px;
+    color : #e85b5b !important;
+    cursor: pointer;
+}
+.employee-add-container .row {
+    margin-bottom: 5px !important;
+}
+.employe-add-labeltxt {
+    color: rgb(86, 86, 86);
+    font-weight: bolder;
+}
+/*Employee Ends*/
+
+.waves-effect.waves-brown .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: rgba(121, 85, 72, 0.65);
+}
+

@@ -1,0 +1,1 @@
+module.exports = require("npm:highcharts-more-node@1.0.1/highcharts-more.js");

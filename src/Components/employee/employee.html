@@ -1,0 +1,171 @@
+<template>
+    <require from="../header/header"></require>
+    <header title=${router.currentInstruction.config.title} xxx="loginFunction"></header>
+
+    <form>
+        <div class="container z-depth-1 employee-add-container">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="hmsid" type="text" class="validate">
+                    <label for="hmsid">HMS Id</label>
+                </div>
+                <div class="col s6 input-field">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 input-field">
+                    <input id="zoho-uname" type="text" class="validate">
+                    <label for="zoho-uname">Zoho Username</label>
+                </div>
+                <div class="input-field col s6">
+                    <select ref="myselect">
+                        <option value="">Choose Department</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Department</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 input-field">
+                    <select>
+                        <option value="">Choose Designationt</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Department</label>
+                </div>
+                <div class="input-field col s6">
+                    <select>
+                        <option value="">Choose Team</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Team</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 input-field">
+                    <select>
+                        <option value="">Choose superior</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Superior</label>
+                </div>
+                <div class="input-field col s6">
+                    <select>
+                        <option value="">Choose Employee Type</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Employee Type</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="email" type="text" class="validate">
+                    <label for="email">Email Id</label>
+                </div>
+                <div class="col s6 input-field">
+                    <input id="skype" type="text" class="validate">
+                    <label for="skype">Skype Id</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <select>
+                        <option value="">Choose Gender</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Gender</label>
+                </div>
+                <div class="col s6 input-field">
+                    <input id="phoneno" type="text" class="validate">
+                    <label for="phoneno">Phone Number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix tiny">today</i>
+                    <input type="date" id="dob" class="datepicker">
+                    <label for="dob">Date of Birth</label>
+                </div>
+                <div class="col s6 input-field">
+                    <i class="material-icons prefix tiny">today</i>
+                    <input type="date" class="datepicker" id="doj">
+                    <label for="doj">Date of joining</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">today</i>
+                    <input type="date" class="datepicker" id="doc">
+                    <label for="doc">Conformation on</label>
+                </div>
+                <div class="col s6 input-field">
+                    <input id="address-permanent" type="text" class="validate">
+                    <label for="address-permanent">Permanent address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="address-present" type="text" class="validate">
+                    <label for="address-present">Present address</label>
+                </div>
+                <div class="col s6 input-field">
+                    <input id="deviceid" type="text" class="validate">
+                    <label for="deviceid">Device Id</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="switch col s6 btn-activ-deactive">
+                    <label>
+                        Active
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        Deactive
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="container z-depth-1 employee-add-container">
+            <div class="row">
+                <span class="employe-add-labeltxt">If experience : </span>
+                <!--<i class="small material-icons col s1 offset-s11" click.delegate = "addExperience()">library_add</i>  -->
+                <a class="btn-floating large waves-effect waves-light btn-add-experience employe-dfltcolor tooltipped" data-tooltip="Add Experience" click.delegate = "addExperience() & throttle:2000"><i class="material-icons">add</i></a>
+
+            </div>
+            <div class="row" repeat.for="explist of companies">
+              <div class="col s5 input-field">
+                  <input type="text" id="compname_${$index}"  value.bind="explist.companyname" >
+                  <label for="compname_${$index}">Company Name</label>
+              </div>
+              <div class="col s5 input-field">
+                  <input type="text" id="exp_${$index}" value.bind="explist.experience">
+                  <label for="exp_${$index}">Experience</label>
+              </div>
+              <div class="col s2">
+                  <i class="small material-icons delete-exp-icon tooltipped" click.delegate = "removeExperience($index)" data-tooltip="Delete Experience">delete</i>
+
+              </div>
+            </div>
+        </div>
+        <div class="btn-save-employeadd">
+            <button class="btn waves-effect waves-light employe-dfltcolor"  type="submit" name="action" click.delegate="formsubmit()">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+    </form>
+
+</template>

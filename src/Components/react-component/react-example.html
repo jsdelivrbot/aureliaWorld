@@ -1,0 +1,10 @@
+<template>
+    <require from="Components/react-component/react-element"></require>
+    <require from="../header/header"></require>
+    <header title=${router.currentInstruction.config.title}></header>
+    <!-- Our custom element and data passed through to the bindable -->
+    <react-element data.bind="reportData" myfun.bind = "xfun" myrouter.bind="theRouter"></react-element>
+    <a class="btn-floating btn-large waves-effect waves-light releaseAddBtn"><i class="material-icons">add</i></a>
+
+    <canvas chart="type: pie; data.bind: data; should-update: true; throttle: 100;"></canvas>
+</template>
