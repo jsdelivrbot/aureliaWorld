@@ -1,8 +1,8 @@
 export class FilterValueConverter {
-    toView(employeelist = [], filter = ''){
+    toView(employeelist = [], filterstring = ''){
         return employeelist.filter(user => {
-            console.log(user);
-            return ~ `${user}`.indexOf(filter)
+            return ~ `${user.name}`.toLowerCase().indexOf(filterstring.toLowerCase())
+
         })
     }
 }
