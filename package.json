@@ -3,11 +3,14 @@
     "dependencies": {
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0",
       "aurelia-chart": "npm:aurelia-chart@^0.2.5",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0",
       "aurelia-framework": "npm:aurelia-framework@^1.0.1",
+      "aurelia-http-client": "npm:aurelia-http-client@^1.0.0",
       "aurelia-materialize-css": "npm:aurelia-materialize-css@^0.0.14",
       "aurelia-react-loader": "npm:aurelia-react-loader@^1.0.4",
       "chartjs": "npm:chartjs@^0.3.24",
       "css": "github:systemjs/plugin-css@^0.1.25",
+      "fetch": "github:github/fetch@^1.0.0",
       "grofit/aurelia-chart": "github:grofit/aurelia-chart@^0.2.5",
       "highcharts": "npm:highcharts@^4.2.5",
       "highcharts-more-node": "npm:highcharts-more-node@^1.0.1",
@@ -33,11 +36,14 @@
   },
   "dependencies": {
     "aurelia-chart": "^0.2.5",
+    "aurelia-fetch-client": "^1.0.0",
     "chart.js": "^1.1.1",
     "highcharts": "^4.2.5",
+    "node-fetch": "^1.6.0",
     "react": "^15.3.0",
     "react-chartjs": "^0.8.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "aurelia": {
     "build": {

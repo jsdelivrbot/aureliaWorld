@@ -19,7 +19,9 @@ System.config({
   map: {
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
     "aurelia-chart": "npm:aurelia-chart@0.2.5",
+    "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.1",
+    "aurelia-http-client": "npm:aurelia-http-client@1.0.0",
     "aurelia-materialize-css": "npm:aurelia-materialize-css@0.0.14",
     "aurelia-react-loader": "npm:aurelia-react-loader@1.0.4",
     "babel": "npm:babel-core@5.8.38",
@@ -27,6 +29,7 @@ System.config({
     "chartjs": "npm:chartjs@0.3.24",
     "core-js": "npm:core-js@1.2.7",
     "css": "node_modules/systemjs-plugin-css/css.js",
+    "fetch": "github:github/fetch@1.0.0",
     "grofit/aurelia-chart": "github:grofit/aurelia-chart@0.2.5",
     "highcharts": "npm:highcharts@4.2.5",
     "highcharts-more-node": "npm:highcharts-more-node@1.0.1",
@@ -102,7 +105,7 @@ System.config({
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
     "npm:@eriklieben/materialize-css@0.97.6": {
-      "css": "github:systemjs/plugin-css@0.1.25",
+      "css": "github:systemjs/plugin-css@0.1.26",
       "jquery": "npm:jquery@3.1.0"
     },
     "npm:acorn@1.2.2": {
@@ -183,6 +186,10 @@ System.config({
     "npm:aurelia-history-browser@1.0.0": {
       "aurelia-history": "npm:aurelia-history@1.0.0",
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
+    },
+    "npm:aurelia-http-client@1.0.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-path": "npm:aurelia-path@1.0.0"
     },
     "npm:aurelia-loader-default@1.0.0": {
       "aurelia-loader": "npm:aurelia-loader@1.0.0",

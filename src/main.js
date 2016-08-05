@@ -1,6 +1,5 @@
 //import {MaterializeCssOptions} from 'aurelia-materialize';
 //import {MaterialValidationViewStrategy} from 'aurelia-materialize';
-
 export function configure(aurelia) {
     aurelia.use
         .defaultBindingLanguage()

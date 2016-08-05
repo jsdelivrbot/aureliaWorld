@@ -186,7 +186,6 @@
   "npm:jquery@3.1.0": {
     "process": "github:jspm/nodelibs-process@^0.1.0"
   },
-  "github:systemjs/plugin-css@0.1.25": {},
   "npm:@eriklieben/materialize-css@0.97.6": {
     "jquery": "npm:jquery",
     "css": "jspm:css@^0.1.20"
@@ -776,5 +775,12 @@
   },
   "github:components/jqueryui@1.12.0": {
     "jquery": "jspm:jquery"
-  }
+  },
+  "npm:aurelia-http-client@1.0.0": {
+    "aurelia-pal": "npm:aurelia-pal@^1.0.0",
+    "aurelia-path": "npm:aurelia-path@^1.0.0"
+  },
+  "github:systemjs/plugin-css@0.1.26": {},
+  "npm:aurelia-fetch-client@1.0.0": {},
+  "github:github/fetch@1.0.0": {}
 }
