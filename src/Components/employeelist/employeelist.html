@@ -3,16 +3,16 @@
 
     <require from ='../commomclass/sort'></require>
     <require from ='../commomclass/limit'></require>
-    <require from="../commomclass/filter"></require>
+  <!--  <require from="../commomclass/filter"></require>  -->
+    <require from="../commomclass/pager"></require>
     <header title=${router.currentInstruction.config.title}></header>
-
 
 
     <div class="container emplist-container">
         <div class="row">
             <div class="input-field col s4 offset-s4">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate" ref="filtertext">
+                <input id="icon_prefix" type="text" class="validate" ref="filtertext" >
                 <label for="icon_prefix">Search</label>
             </div>
            </div>
@@ -42,7 +42,7 @@
                     <td>hm.gty</td>
                     <td>963847</td>
                 </tr>  -->
-                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | take : limit.value | sort : { propertyName: column, direction: direction }">
+                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | sort : { propertyName: column, direction: direction } | take : { from : takefrm, limit : 10} ">
                     <td><img class=" circle responsive-img employeelist-userImg" src="http://rest.hakunamatata.in/user/getProfilePhoto/${user.photoKey}"></td>
                     <td>${user.name}</td>
                     <td>${user.hmsId}</td>
@@ -52,6 +52,12 @@
                 </tr>
                 </tbody>
             </table>
+
+                <pager page-count.bind="pageCount"
+                       page-index.bind="pageIndex"
+                       set-page.call="setPage($event)">
+                </pager>
+
         </div>
     </div>
 </template>

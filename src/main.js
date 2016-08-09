@@ -10,7 +10,9 @@ export function configure(aurelia) {
         .eventAggregator()
         .plugin("aurelia-materialize-css")
         .plugin('aurelia-react-loader')
-        .feature('aurelia-chart');
+        .feature('aurelia-chart')
+        .plugin('aurelia-breeze')
+        ;
 
     aurelia.start().then(() => aurelia.setRoot());
 }

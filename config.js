@@ -17,8 +17,11 @@ System.config({
   },
 
   map: {
+    "aurelia-binding": "npm:aurelia-binding@1.0.1",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
+    "aurelia-breeze": "npm:aurelia-breeze@2.1.1",
     "aurelia-chart": "npm:aurelia-chart@0.2.5",
+    "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.1",
     "aurelia-http-client": "npm:aurelia-http-client@1.0.0",
@@ -26,6 +29,7 @@ System.config({
     "aurelia-react-loader": "npm:aurelia-react-loader@1.0.4",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
+    "breeze": "npm:breeze-client@1.5.10",
     "chartjs": "npm:chartjs@0.3.24",
     "core-js": "npm:core-js@1.2.7",
     "css": "node_modules/systemjs-plugin-css/css.js",
@@ -160,6 +164,13 @@ System.config({
       "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0",
       "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0",
       "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0"
+    },
+    "npm:aurelia-breeze@2.1.1": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.1",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-templating": "npm:aurelia-templating@1.0.0",
+      "breeze-client": "npm:breeze-client@1.5.10"
     },
     "npm:aurelia-chart@0.2.5": {
       "aurelia-framework": "npm:aurelia-framework@1.0.1",
