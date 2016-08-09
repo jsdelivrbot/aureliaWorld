@@ -7,6 +7,10 @@ export class Employee{
         experience: ''
     }];
 
+    constructor(){
+        this.limit = 10;
+    }
+
     attached() {
         $('.tooltipped').tooltip('remove');
         $('select').material_select();
