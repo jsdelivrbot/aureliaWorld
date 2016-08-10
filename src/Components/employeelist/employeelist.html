@@ -10,21 +10,20 @@
 
     <div class="container emplist-container">
         <div class="row">
-            <div class="input-field col s4 offset-s4">
-                <i class="material-icons prefix">account_circle</i>
+            <div class="input-field col s4 offset-s4" >
                 <input id="icon_prefix" type="text" class="validate" ref="filtertext" >
                 <label for="icon_prefix">Search</label>
             </div>
            </div>
         <div class="row">
             <table class="bordered z-depth-1 emplist-table">
-                <thead class="tblHeader">
-                <tr>
-                    <th>Image</th>
-                    <th data-field="id">Name <i class="tiny material-icons" click.delegate = "sortingfunc('name')">swap_vertical_circle</i></th>
-                    <th data-field="name">Emp.Id</th>
-                    <th data-field="price">Email.Id</th>
-                    <th data-field="price">Phone Number</th>
+                <thead class="tblHeader" >
+                <tr id="emp_serachBar">
+                    <th></th>
+                    <th data-field="id">Name &nbsp;<i class="tiny material-icons emplist_sort" click.delegate = "sortingfunc('name')">swap_vertical_circle</i></th>
+                    <th data-field="name">Id &nbsp;<i class="tiny material-icons emplist_sort" click.delegate = "sortingfunc('hmsId')">swap_vertical_circle</i></th>
+                    <th data-field="price">Mail</th>
+                    <th data-field="price">Mobile</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,13 +41,12 @@
                     <td>hm.gty</td>
                     <td>963847</td>
                 </tr>  -->
-                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | sort : { propertyName: column, direction: direction } | take : { from : takefrm, limit : 10} ">
+                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | sort : { propertyName: column, direction: direction } | take : { from : takefrm, limit : 10} " click.delegate="empdetail(user)">
                     <td><img class=" circle responsive-img employeelist-userImg" src="http://rest.hakunamatata.in/user/getProfilePhoto/${user.photoKey}"></td>
                     <td>${user.name}</td>
                     <td>${user.hmsId}</td>
                     <td>${user.email}</td>
                     <td>${user.mobileNo}</td>
-                    <td>${user.userId}</td>
                 </tr>
                 </tbody>
             </table>

@@ -28,9 +28,33 @@
     color: rgb(86, 86, 86);
     font-size: 13px;
 }
+/*Header*/
+  .navbar-header{
+       position: fixed;
+       top: 0px;
+       width: 100%;
+       z-index: 999;
+   }
+  /*.header_profile_icon {
+      position: fixed;
+      right: 0px;
+      top: 1%;
+      padding-right: 30px;
+  } */
+.header_profile_icon b {
+    float: right;
+    margin-right: 20px;
+}
+.header_profile_icon img {
+    float: right;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+/*Header Ends*/
+/*Dashboard*/
 .dashboard-chart-container {
     width: 90% !important;
-    margin-top: 40px !important;
+    margin-top: 8% !important;
     padding: 10px;
 }
 .chart-margin {
@@ -39,7 +63,7 @@
 
 /*Employee */
 .employee-add-container {
-    margin-top: 40px !important;
+    margin-top: 8% !important;
     width : 90% !important;
     padding : 0px 20px 10px 20px;
     background-color: rgba(72,70,70,0.04);
@@ -75,7 +99,7 @@
 /*Employee list*/
 .emplist-container {
     width : 85% !important;
-    margin-top: 40px !important;
+    margin-top: 5% !important;
     padding: 10px;
 }
 
@@ -93,8 +117,21 @@
     line-height: 1;
     text-transform:capitalize;
 }
+.emplist-table tbody tr td:nth-child(4) {
+    text-transform: lowercase !important;
+}
+.emplist-table tbody tr td:nth-child(5), .emplist-table thead tr th:nth-child(5) {
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+}
+
 .emplist-table th, .emplist-table td{
     padding: 10px 5px !important;
+}
+.emplist_sort {
+    cursor: pointer;
 }
 
 /*Employee Ends*/
@@ -105,6 +142,7 @@
     background-color: rgba(121, 85, 72, 0.65);
 }
 
+/*Pager*/
 pager {
     text-align: center;
 
@@ -112,4 +150,43 @@ pager {
 .pagination li.active {
     background-color: rgb(0, 188, 212) !important;
 }
+/*pager Ends*/
 
+/*Release */
+.release_container{
+    margin-top: 5% !important;
+}
+
+/* Employee Detail*/
+.emp_detail_container{
+   margin-top: 8% !important;
+   margin-bottom: 5% !important;
+    max-width : 70% !important;
+    text-align: center;
+    background-color: #fbfbfb;
+}
+.employeedetail_userImg {
+    width: 10% !important;
+}
+.emp_detail_container .row {
+    margin:5px 0px !important;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding: 20px;
+}
+.emp_detail_container .row div:nth-child(1) {
+    border: 0;
+    color: #181818;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0
+}
+.emp_detail_container .row div:nth-child(2) {
+    color: #737373;
+    font-size: 14px;
+}
+.empdtil_textCntnt .row {
+    text-align: justify ;
+}
+
+/* Employee Detail End*/

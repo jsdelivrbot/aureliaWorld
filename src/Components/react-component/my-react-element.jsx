@@ -33,7 +33,7 @@ export default class MyReactElement extends React.Component {
         }
 
         return (
-            <div className="container" style={styles.container}>
+            <div className="container release_container" style={styles.container}>
                   <div className="row">
                       <div className="col s10">
                 <table className="bordered z-depth-1" style={styles.table}>

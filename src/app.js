@@ -19,8 +19,11 @@ export class App{
                 moduleId: './Components/react-component/report-details/report-detail', nav: false, title:'Release Detail' },
             { route: 'employee',  name: 'Employee',
                 moduleId: './Components/employee/employee', nav: true, title:'Employee' },
-            { route: 'employeelist',  name: 'Employee List',
-                moduleId: './Components/employeelist/employeelist', nav: true, title:'Employee List' }
+            { route: 'employeelist',  name: 'Employee',
+                moduleId: './Components/employeelist/employeelist', nav: true, title:'Employee List' },
+            { route: 'employee/:userid',  name: 'Employee Detail',
+                moduleId: './Components/employeelist/employeedetails', nav: false, title:'Employee Details' }
+
         ]);
         config.mapUnknownRoutes('not-found');
         this.router = router;

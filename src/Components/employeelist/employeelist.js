@@ -6,12 +6,16 @@ import {inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import pagerserv from '../commomclass/pager-services.js';
 import {BindingEngine} from 'aurelia-binding';
+import {Router} from 'aurelia-router';
 let httpClient = new HttpClient();
 
 
-@inject(pagerserv,BindingEngine)
+@inject(pagerserv,BindingEngine,Router)
 export class Employeelist{
-    constructor(pagerserv,bindingEngine){
+
+    static inject() { return [Router]; }
+
+    constructor(pagerserv,bindingEngine,router){
         this.employeelist = [];
         this.column = 'userId';
         this.direction = 'ascending';
@@ -23,6 +27,7 @@ export class Employeelist{
         //
         let subscription = bindingEngine.propertyObserver(this.pagerserv, 'araylenght')
             .subscribe((newValue, oldValue) => this.actionpagination(newValue));
+        this.theRouter = router;
    }
 
 
@@ -46,9 +51,19 @@ export class Employeelist{
         this.pageIndex = index;
         this.takefrm = this.pageIndex * 10;
     }
+    empdetail(uid){
+    // console.log(uid);
+        //this.pagerserv.employee_detailAry = uid;
+        localStorage.setItem('employe', JSON.stringify(uid));
+        this.theRouter.navigate("employee/:details");
+
+        //let userprofile = this.router.routes.find(x => x.name === 'sibi');
+        //userprofile.name = username;
+        //this.router.navigateToRoute('employee/:details');
+    }
 
     load(){
-        httpClient.fetch('http://rest.hakunamatata.in/user/list?authorization=76e6a910-5de9-11e6-a762-2d2501aea41f')
+        httpClient.fetch('http://rest.hakunamatata.in/user/list?authorization=a11a8c60-5efc-11e6-a762-2d2501aea41f')
             .then(response => response.json())
             .then(data => {
                 if(data.statusCode == 200){
