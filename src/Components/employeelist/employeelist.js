@@ -63,7 +63,7 @@ export class Employeelist{
     }
 
     load(){
-        httpClient.fetch('http://rest.hakunamatata.in/user/list?authorization=a11a8c60-5efc-11e6-a762-2d2501aea41f')
+        httpClient.fetch('http://rest.hakunamatata.in/user/list?authorization=b490d7b0-5f81-11e6-a762-2d2501aea41f')
             .then(response => response.json())
             .then(data => {
                 if(data.statusCode == 200){

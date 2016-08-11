@@ -120,6 +120,13 @@
 .emplist-table tbody tr td:nth-child(4) {
     text-transform: lowercase !important;
 }
+.emplist-table tbody tr {
+   cursor: pointer;
+
+}
+.emplist-table tbody tr:hover {
+    background-color: #eeeeee;
+}
 .emplist-table tbody tr td:nth-child(5), .emplist-table thead tr th:nth-child(5) {
     display: -webkit-flex; /* Safari */
     -webkit-justify-content: space-around; /* Safari 6.1+ */
@@ -172,6 +179,9 @@ pager {
     margin:5px 0px !important;
     border-top: 1px solid rgba(0,0,0,0.12);
     padding: 20px;
+}
+.emp_detail_container .row:nth-child(1) {
+    border-top: 0px !important;
 }
 .emp_detail_container .row div:nth-child(1) {
     border: 0;
