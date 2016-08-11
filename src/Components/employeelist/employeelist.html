@@ -14,16 +14,23 @@
                 <input id="icon_prefix" type="text" class="validate" ref="filtertext" >
                 <label for="icon_prefix">Search</label>
             </div>
+            <div class="col s4">
+                <a class="btn-floating large waves-effect waves-light btn-add-experience employe-dfltcolor tooltipped" data-tooltip="Add Employee" href="#/employee">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
            </div>
         <div class="row">
             <table class="bordered z-depth-1 emplist-table">
                 <thead class="tblHeader" >
                 <tr id="emp_serachBar">
                     <th></th>
-                    <th data-field="id">Name &nbsp;<i class="tiny material-icons emplist_sort" click.delegate = "sortingfunc('name')">swap_vertical_circle</i></th>
                     <th data-field="name">Id &nbsp;<i class="tiny material-icons emplist_sort" click.delegate = "sortingfunc('hmsId')">swap_vertical_circle</i></th>
+                    <th data-field="id">Name &nbsp;<i class="tiny material-icons emplist_sort" click.delegate = "sortingfunc('name')">swap_vertical_circle</i></th>
                     <th data-field="price">Mail</th>
-                    <th data-field="price">Mobile</th>
+                    <th data-field="mobile">Mobile</th>
+                    <th data-field="">Status</th>
+                    <th data-field="">Details</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,12 +48,19 @@
                     <td>hm.gty</td>
                     <td>963847</td>
                 </tr>  -->
-                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | sort : { propertyName: column, direction: direction } | take : { from : takefrm, limit : 10} " click.delegate="empdetail(user)">
+                <tr repeat.for="user of employeelist | filter:['name' ,'mobileNo' ,'hmsId'] : filtertext.value | sort : { propertyName: column, direction: direction } | take : { from : takefrm, limit : 10} ">
                     <td><img class=" circle responsive-img employeelist-userImg" src="http://rest.hakunamatata.in/user/getProfilePhoto/${user.photoKey}"></td>
-                    <td>${user.name}</td>
                     <td>${user.hmsId}</td>
+                    <td>${user.name}</td>
                     <td>${user.email}</td>
                     <td>${user.mobileNo}</td>
+                    <td class="switch"><label>
+                        Active
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        Deactive
+                    </label></td>
+                    <td><img class="svgicon-more icon_emplist_viewDtil" src="src/assets/images/svg-icons/movert.svg" click.delegate="empdetail(user)"></td>
                 </tr>
                 </tbody>
             </table>

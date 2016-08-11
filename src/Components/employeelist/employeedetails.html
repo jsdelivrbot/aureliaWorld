@@ -8,59 +8,74 @@
             <img if.bind="employeedetail.photoKey" class=" circle responsive-img employeedetail_userImg" src="http://rest.hakunamatata.in/user/getProfilePhoto/${employeedetail.photoKey}">
             <img if.bind="!employeedetail.photoKey" class=" circle responsive-img employeedetail_userImg" src="src/assets/images/avator.jpg">
         </div>
-        <div class="empdtil_textCntnt">
-        <div class="row col s12">
-            <div class="col s6">Name</div>
-            <div class="col s6">${employeedetail.name}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Id</div>
-            <div class="col s6">${employeedetail.hmsId}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Department</div>
-            <div class="col s6">${employeedetail.department}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Designation</div>
-            <div class="col s6">${employeedetail.designation}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Team</div>
-            <div class="col s6">${employeedetail.team}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Mail</div>
-            <div class="col s6">${employeedetail.email}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Skype</div>
-            <div class="col s6">${employeedetail.skypeId}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Mobile</div>
-            <div class="col s6">${employeedetail.mobileNo}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">DOB</div>
-            <div class="col s6">${employeedetail.dob | dateFormat}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Joining date</div>
-            <div class="col s6">${employeedetail.doj | dateFormat}</div>
-        </div>
-        <div class="row col s12">
-            <div class="col s6">Confirmation Date</div>
-            <div class="col s6">${employeedetail.doc | dateFormat }</div>
-        </div>
-            <div class="row col s12">
-                <div class="col s6">Present Address</div>
-                <div class="col s6">${employeedetail.address[0]['address']}</div>
+        <div class="empdtil_textCntnt col s12">
+            <div class="col s12 row" >
+                <div class="col s6 ">
+                    <div class="col s6">Name</div>
+                    <div class="col s6">${employeedetail.name}</div>
+                </div>
+                <div class="col s6 ">
+                    <div class="col s6">Id</div>
+                    <div class="col s6">${employeedetail.hmsId}</div>
+                </div>
             </div>
-            <div class="row col s12">
-                <div class="col s6">Permanent Address</div>
-                <div class="col s6">${employeedetail.address[1]['address']}</div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">Department</div>
+                    <div class="col s6">${employeedetail.department}</div>
+                </div>
+                <div class=" col s6">
+                    <div class="col s6">Designation</div>
+                    <div class="col s6">${employeedetail.designation}</div>
+                </div>
             </div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">Team</div>
+                    <div class="col s6">${employeedetail.team}</div>
+                </div>
+                <div class=" col s6">
+                    <div class="col s6">Mail</div>
+                    <div class="col s6">${employeedetail.email}</div>
+                </div>
+            </div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">Skype</div>
+                    <div class="col s6">${employeedetail.skypeId}</div>
+                </div>
+                <div class=" col s6">
+                    <div class="col s6">Mobile</div>
+                    <div class="col s6">${employeedetail.mobileNo}</div>
+                </div>
+            </div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">DOB</div>
+                    <div class="col s6">${employeedetail.dob | dateFormat}</div>
+                </div>
+                <div class=" col s6">
+                    <div class="col s6">Joining date</div>
+                    <div class="col s6">${employeedetail.doj | dateFormat}</div>
+                </div>
+            </div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">Confirmation Date</div>
+                    <div class="col s6">${employeedetail.doc | dateFormat }</div>
+                </div>
+                <div class=" col s6">
+                    <div class="col s6">Present Address</div>
+                    <div class="col s6">${employeedetail.address[0]['address']}</div>
+                </div>
+            </div>
+            <div class="col s12 row" >
+                <div class=" col s6">
+                    <div class="col s6">Permanent Address</div>
+                    <div class="col s6">${employeedetail.address[1]['address']}</div>
+                </div>
+            </div>
+
     </div>
     </div>
 </template>

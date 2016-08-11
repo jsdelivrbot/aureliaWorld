@@ -11,5 +11,8 @@ export class Employeedetails{
         //console.log(this.pagerserv.employee_detailAry)
         this.employeedetail = JSON.parse('['+ localStorage.getItem('employe') +']');
     }
+    attached(){
+
+    }
 
 }

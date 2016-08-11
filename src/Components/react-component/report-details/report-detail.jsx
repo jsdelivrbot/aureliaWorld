@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 let styles = {
     containerMargin : {
-        marginTop : 40,
+        marginTop : '8%',
     },
     dataContainer : {
         padding : 15

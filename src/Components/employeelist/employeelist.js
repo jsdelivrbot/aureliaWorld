@@ -33,7 +33,10 @@ export class Employeelist{
 
     attached() {
         $('select').material_select();
+
+       // $('.tooltipped').tooltip({delay: 50});
         this.pageCount = this.pagerserv.araylenght;
+      //  $('.tooltipped').tooltip('remove');
     }
     sortingfunc(propname){
         this.column = propname;

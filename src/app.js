@@ -18,9 +18,9 @@ export class App{
             { route: 'release/:id',  name: 'Release',
                 moduleId: './Components/react-component/report-details/report-detail', nav: false, title:'Release Detail' },
             { route: 'employee',  name: 'Employee',
-                moduleId: './Components/employee/employee', nav: true, title:'Employee' },
+                moduleId: './Components/employee/employee', nav: false, title:'Employee' },
             { route: 'employeelist',  name: 'Employee',
-                moduleId: './Components/employeelist/employeelist', nav: true, title:'Employee List' },
+                moduleId: './Components/employeelist/employeelist', nav: true, title:'Employee' },
             { route: 'employee/:userid',  name: 'Employee Detail',
                 moduleId: './Components/employeelist/employeedetails', nav: false, title:'Employee Details' }
 

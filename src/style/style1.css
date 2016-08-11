@@ -44,6 +44,7 @@
 .header_profile_icon b {
     float: right;
     margin-right: 20px;
+    text-transform: capitalize;
 }
 .header_profile_icon img {
     float: right;
@@ -120,24 +121,16 @@
 .emplist-table tbody tr td:nth-child(4) {
     text-transform: lowercase !important;
 }
-.emplist-table tbody tr {
-   cursor: pointer;
-
-}
 .emplist-table tbody tr:hover {
     background-color: #eeeeee;
 }
-.emplist-table tbody tr td:nth-child(5), .emplist-table thead tr th:nth-child(5) {
-    display: -webkit-flex; /* Safari */
-    -webkit-justify-content: space-around; /* Safari 6.1+ */
-    display: flex;
-    justify-content: space-around;
-}
-
 .emplist-table th, .emplist-table td{
     padding: 10px 5px !important;
 }
 .emplist_sort {
+    cursor: pointer;
+}
+.icon_emplist_viewDtil {
     cursor: pointer;
 }
 
@@ -168,7 +161,7 @@ pager {
 .emp_detail_container{
    margin-top: 8% !important;
    margin-bottom: 5% !important;
-    max-width : 70% !important;
+    width : 80% !important;
     text-align: center;
     background-color: #fbfbfb;
 }
@@ -180,9 +173,7 @@ pager {
     border-top: 1px solid rgba(0,0,0,0.12);
     padding: 20px;
 }
-.emp_detail_container .row:nth-child(1) {
-    border-top: 0px !important;
-}
+
 .emp_detail_container .row div:nth-child(1) {
     border: 0;
     color: #181818;
