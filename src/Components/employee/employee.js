@@ -1,6 +1,6 @@
 
 export class Employee{
-
+    selectedFiles;
     experience_array = [];
     companies = [{
         companyname: '',
@@ -19,6 +19,9 @@ export class Employee{
             selectYears: 15 // Creates a dropdown of 15 years to control year
         });
         $('.tooltipped').tooltip({delay: 50});
+    }
+    imageuploadfun(){
+        $("input[id='my_file']").click();
     }
 
     removeExperience(key){

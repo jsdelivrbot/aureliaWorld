@@ -12,7 +12,6 @@ export class Employeedetails{
         this.employeedetail = JSON.parse('['+ localStorage.getItem('employe') +']');
     }
     attached(){
-
     }
 
 }

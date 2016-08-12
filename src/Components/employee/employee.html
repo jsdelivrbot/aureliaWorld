@@ -1,9 +1,25 @@
 <template>
     <require from="../header/header"></require>
+    <require from="../commomclass/imageblob"></require>
+    <require from="../commomclass/imagefilelists"></require>
+    <require from="../commomclass/saveimage.js"></require>
     <header title=${router.currentInstruction.config.title} xxx="loginFunction"></header>
 
     <form>
         <div class="container z-depth-1 employee-add-container">
+            <div class="row employee_addimg">
+                <div if.bind="!selectedFiles" >
+                    <img class="circle" src="src/assets/images/avator.jpg"
+                         click.delegate = "imageuploadfun()"  />
+                    <img class="circle upload_icon" src="src/assets/images/upload_icon2.png"  click.delegate = "imageuploadfun()" >
+                </div>
+                <div if.bind="selectedFiles" >
+                    <img class="circle" src.bind="selectedFiles[0] | blobToUrl | saveimage"
+                         click.delegate = "imageuploadfun()"  />
+                    <img class="circle upload_icon" src="src/assets/images/upload_icon2.png"  click.delegate = "imageuploadfun()" >
+                </div>
+
+            </div>
             <div class="row">
                 <div class="input-field col s6">
                     <input id="hmsid" type="text" class="validate">
@@ -136,8 +152,17 @@
                         Deactive
                     </label>
                 </div>
+                <div class="col s6">
+
+                </div>
             </div>
         </div>
+        <div>
+
+
+            <input type="file" id="my_file" style="display: none;" files.bind="selectedFiles" accept="image/*"/>
+        </div>
+
         <div class="container z-depth-1 employee-add-container">
             <div class="row">
                 <span class="employe-add-labeltxt">If experience : </span>

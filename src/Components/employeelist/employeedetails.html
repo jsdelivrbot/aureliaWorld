@@ -5,7 +5,7 @@
 
     <div class="container emp_detail_container z-depth-1" repeat.for="employeedetail of employeedetail">
         <div class="row">
-            <img if.bind="employeedetail.photoKey" class=" circle responsive-img employeedetail_userImg" src="http://rest.hakunamatata.in/user/getProfilePhoto/${employeedetail.photoKey}">
+            <img if.bind="employeedetail.photoKey" class=" circle responsive-img employeedetail_userImg " src="http://rest.hakunamatata.in/user/getProfilePhoto/${employeedetail.photoKey}">
             <img if.bind="!employeedetail.photoKey" class=" circle responsive-img employeedetail_userImg" src="src/assets/images/avator.jpg">
         </div>
         <div class="empdtil_textCntnt col s12">
