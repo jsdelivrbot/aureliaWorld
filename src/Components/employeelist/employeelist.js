@@ -1,21 +1,17 @@
 
-//import {inject} from 'aurelia-framework';
-import 'fetch';
-import {HttpClient} from 'aurelia-fetch-client';
 import {inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import pagerserv from '../commomclass/pager-services.js';
 import {BindingEngine} from 'aurelia-binding';
 import {Router} from 'aurelia-router';
-let httpClient = new HttpClient();
+import {HttpValueConverter} from '../commomclass/httpservice.js';
 
-
-@inject(pagerserv,BindingEngine,Router)
+@inject(pagerserv,BindingEngine,Router,HttpValueConverter)
 export class Employeelist{
 
     static inject() { return [Router]; }
 
-    constructor(pagerserv,bindingEngine,router){
+    constructor(pagerserv,bindingEngine,router,HttpValueConverter){
         this.employeelist = [];
         this.column = 'userId';
         this.direction = 'ascending';
@@ -24,19 +20,16 @@ export class Employeelist{
         this.pageIndex = 0;
         this.takefrm  = 0;
         this.pagerserv = pagerserv;
-        //
         let subscription = bindingEngine.propertyObserver(this.pagerserv, 'araylenght')
             .subscribe((newValue, oldValue) => this.actionpagination(newValue));
         this.theRouter = router;
+        this.HttpValueConverter = HttpValueConverter;
    }
 
 
     attached() {
         $('select').material_select();
-
-       // $('.tooltipped').tooltip({delay: 50});
         this.pageCount = this.pagerserv.araylenght;
-      //  $('.tooltipped').tooltip('remove');
     }
     sortingfunc(propname){
         this.column = propname;
@@ -55,19 +48,16 @@ export class Employeelist{
         this.takefrm = this.pageIndex * 10;
     }
     empdetail(uid){
-    // console.log(uid);
         //this.pagerserv.employee_detailAry = uid;
         localStorage.setItem('employe', JSON.stringify(uid));
         this.theRouter.navigate("employee/:details");
-
         //let userprofile = this.router.routes.find(x => x.name === 'sibi');
         //userprofile.name = username;
         //this.router.navigateToRoute('employee/:details');
     }
 
     load(){
-        httpClient.fetch('http://rest.hakunamatata.in/user/list?authorization=2b7a87d0-6041-11e6-a762-2d2501aea41f')
-            .then(response => response.json())
+        this.HttpValueConverter.getMyData('user/list','GET')
             .then(data => {
                 if(data.statusCode == 200){
                     var pages = data.userList.length / 10;
@@ -98,7 +88,6 @@ export class FilterValueConverter {
             String(entry[prop]).toLowerCase().indexOf(term) >= 0));
         var pages = filterArray.length / 10;
         pagerserv.araylenght = Math.round(pages + 0.4);
-        //pagerserv.araylenght = filterArray.length / 10;
         return filterArray;
     }
 }

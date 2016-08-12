@@ -22,7 +22,9 @@ export class App{
             { route: 'employeelist',  name: 'Employee',
                 moduleId: './Components/employeelist/employeelist', nav: true, title:'Employee' },
             { route: 'employee/:userid',  name: 'Employee Detail',
-                moduleId: './Components/employeelist/employeedetails', nav: false, title:'Employee Details' }
+                moduleId: './Components/employeelist/employeedetails', nav: false, title:'Employee Details' },
+            { route: 'attendance',  name: 'Attendance',
+                moduleId: './Components/attendance/attendance', nav: true, title:'Attendance' },
 
         ]);
         config.mapUnknownRoutes('not-found');
